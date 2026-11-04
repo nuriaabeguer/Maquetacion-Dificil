@@ -1,0 +1,527 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+/* :root {} Es como un armario. Permite crear un cajon en ese armario para que tenga un estilo determinado.*/
+:root {
+    /***** COLORES *****/
+    --color-grey: #606060;
+    --color-light-gray: #F0F0F0;
+    --color-bg: #FBFBFB;
+
+    /***** SPACE *****/
+    --space-xxs: 8px;
+    --space-xs: 16px;
+    --space-md: 24px;
+    --space-lg: 32px;
+    --space-xl: 48px;
+    --space-xxl: 64px;
+
+
+    /***** GRID *****/
+    --grid-2col: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+
+
+
+/*************** COMPONENTS ***************/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+span {
+    font-family: "Roboto", sans-serif;
+}
+
+h1 {
+    font-size: 56px;
+    font-weight: 500;
+}
+
+h2 {
+    font-size: 32px;
+    font-weight: 500;
+}
+
+h3 {
+    font-size: 19px;
+    font-weight: 500;
+}
+
+p {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+ul {
+    list-style: none;
+}
+
+.big {
+    color: var(--color-grey);
+    font-size: 18px;
+}
+
+.eyebrow {
+    color: var(--color-grey);
+    font-size: 13px;
+    font-weight: 400;
+
+    text-transform: uppercase;
+}
+
+.small {
+    color: var(--color-grey);
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 100%;
+}
+
+.btn {
+    background-color: #000;
+    color: #fff;
+    padding: 16px 32px;
+    border-radius: 73px;
+
+    font-size: 15px;
+
+    display: inline-block;
+}
+
+.menu-link {
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.link {
+    font-weight: 500;
+    font-size: 15px;
+
+    display: inline-flex;
+    gap: var(--space-xxs);
+    align-items: center;
+}
+
+.block {
+    max-width: 1040px;
+    margin: 0 auto;
+}
+
+
+
+
+/*************** HEADER ***************/
+
+.header {
+    padding: var(--space-md);
+    background-color: var(--color-bg);
+}
+
+.header__block {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__logo {
+    max-width: 75px;
+}
+
+.header__menu {
+    list-style: none;
+
+    display: flex;
+    align-items: center;
+    gap: var(--space-lg);
+}
+
+
+
+/*************** HERO ***************/
+
+.hero {
+    padding: var(--space-xxl) var(--space-md);
+    background-color: var(--color-bg);
+}
+
+.hero__block {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xl);
+}
+
+.hero__content {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xl);
+
+    flex-wrap: wrap;
+}
+
+.hero__content__text {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+
+    flex: 1 1 300px;
+}
+
+
+.hero__btns {
+    display: flex;
+    padding-top: var(--space-xxs);
+    gap: var(--space-md);
+}
+
+.hero__content__img {
+    display: flex;
+
+    flex: 1 1 400px;
+}
+
+.hero__foot {
+    border-top: 1px solid #DEDEDE;
+    display: flex;
+    justify-content: space-between;
+    padding-top: var(--space-md);
+
+    flex-wrap: wrap;
+}
+
+.hero__text__black {
+    color: #000;
+}
+
+
+
+
+
+/*************** SECTION 1 ***************/
+
+.section1 {
+    padding: var(--space-xl) var(--space-md);
+    background-color: var(--color-bg);
+}
+
+.section1__block {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+}
+
+.section1__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section1__cards {
+    display: flex;
+    gap: var(--space-xs);
+
+    flex-wrap: wrap;
+}
+
+.section1__card {
+    padding: var(--space-lg);
+    background-color: var(--color-light-gray);
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+
+    flex: 1 1 250px;
+}
+
+.section1__card__text {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+}
+
+
+
+/*************** SECTION 2 ***************/
+
+.section2 {
+    padding: var(--space-xxl) var(--space-md);
+    background-color: var(--color-bg);
+}
+
+.section2__block {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+}
+
+.section2__head {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+}
+
+.section2__cards {
+    display: flex;
+    gap: var(--space-lg);
+
+    flex-wrap: wrap;
+}
+
+.section2__card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+
+    flex: 1 1 400px;
+}
+
+
+.section2__card__text {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xxs);
+}
+
+.link__cards {
+    display: flex;
+    justify-content: space-between;
+
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 100%;
+}
+
+
+
+
+/*************** SECTION 3 ***************/
+
+.section3 {
+    padding: var(--space-xxl) var(--space-md);
+    background-color: var(--color-bg);
+}
+
+.section3__block {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+}
+
+.section3__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.section3__content {
+    display: flex;
+    gap: var(--space-xs);
+
+    flex-wrap: wrap;
+}
+
+.section3__card {
+    background-color: var(--color-light-gray);
+    flex: 1 1 350px;
+}
+
+.section3__card__text {
+    padding: var(--space-lg);
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+}
+
+.section3__row {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+
+    flex: 1 1 350px;
+}
+
+.section3__row__content {
+    padding: var(--space-lg);
+    background-color: var(--color-light-gray);
+
+    display: flex;
+    gap: var(--space-md);
+
+    flex-grow: 1; /*Para que ocupe todo el alto de la caja*/
+}
+
+.section3__row__text {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+}
+
+
+
+
+
+/*************** SECTION 3 (GRID) ***************/
+
+.seccion3 {
+    padding: var(--space-xxl) var(--space-md);
+    background-color: var(--color-bg);
+}
+
+.seccion3__grid {
+    display: grid;
+    grid-template-columns: var(--grid-2col);
+
+    gap: var(--space-xs);
+}
+
+.seccion3__elem {
+    background-color: var(--color-light-gray);
+
+    display: flex;
+    flex-direction: column;
+}
+
+.seccion3__elem {
+    padding: var(--space-lg);
+
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-md);
+}
+
+.seccion3__elem__content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+}
+
+.tarjeta1 {
+    grid-row: 1/3;
+
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.tarjeta1__content {
+    padding: var(--space-lg);
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+}
+
+
+
+
+
+
+/*************** FOOTER ***************/
+
+.footer {
+    padding: 0 var(--space-md);
+    background-color: var(--color-bg);
+}
+
+.footer__block {}
+
+.footer__top {
+    padding: var(--space-xl);
+    background-color: var(--color-light-gray);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--space-xl);
+}
+
+.footer__top__left {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+
+    flex: 2 1;
+}
+
+.footer__top__right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-md);
+
+    flex: 1 1;
+}
+
+.footer__bottom {
+    padding: var(--space-lg) var(--space-lg);
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+}
+
+.footer__bottom__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__bottom__top__left {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xxs);
+}
+
+.footer__logo {
+    max-width: 75px;
+}
+
+.footer__bottom__top__right {
+    display: flex;
+    gap: var(--space-lg);
+}
+
+.footer__bottom__bottom {
+    padding-top: var(--space-md);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+
+    border-top: 1px solid #DEDEDE;
+}
+
+.footer__bottom__bottom__btn {
+    display: flex;
+    gap: var(--space-md);
+}
+
+
+
+
